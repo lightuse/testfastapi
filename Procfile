@@ -1,1 +1,1 @@
-echo web: python app.py > Procfile
+echo web: python main.py > Procfile
