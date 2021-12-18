@@ -1,2 +1,2 @@
 #filename: Procfile
-web: gunicorn flaskapp:app
+web: gunicorn runserver:app --log-file=-
