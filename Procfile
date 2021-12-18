@@ -1,2 +1,2 @@
 #filename: Procfile
-web: gunicorn
+web: gunicorn flaskapp:app
