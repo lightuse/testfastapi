@@ -5,15 +5,19 @@ click==8.0.3
 colorama==0.4.4
 fastapi==0.70.1
 h11==0.12.0
-httptools==0.3.0
 idna==3.3
+Pillow==8.4.0
 pydantic==1.8.2
-python-dotenv==0.19.2
-PyYAML==6.0
+python-multipart==0.0.5
+scipy==1.7.3
+six==1.16.0
 sniffio==1.2.0
 starlette==0.16.0
+threadpoolctl==3.0.0
+timm==0.4.12
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.8.1+cpu
+torchvision==0.9.1+cpu
 typing_extensions==4.0.1
 uvicorn==0.16.0
-watchgod==0.7
-websockets==10.1
 wincertstore==0.2
