@@ -1,6 +1,21 @@
 from fastapi import FastAPI
 from fastapi import APIRouter, File, UploadFile
+from starlette.middleware.cors import CORSMiddleware
+
 app = FastAPI()
+
+origins = [
+    "https://pytorch-cpu.herokuapp.com",
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 import os
 from os.path import join, dirname, realpath
