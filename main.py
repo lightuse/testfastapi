@@ -4,9 +4,11 @@ from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+# https://fastapi.tiangolo.com/tutorial/cors/
 origins = [
     "https://pytorch-cpu.herokuapp.com",
     "http://localhost:8080",
+    "http://localhost:5000/"
 ]
 
 app.add_middleware(
@@ -51,7 +53,7 @@ model_parameter = 'weights_fine_tuning_effcientv2.pth'
 image_size = 160
 class_names = ['1_建物から庭', '2_外の庭', '5_お菓子', '6_洋館内部', '7_建物屋敷', '9_その他']
 
-@app.post('/inference')
+@app.post('/api/inference')
 def inference(file: UploadFile = File(...)):
     path = file.file
     img = Image.open(path).convert('RGB')
